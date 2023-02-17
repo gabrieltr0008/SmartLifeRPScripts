@@ -16,7 +16,8 @@ client_scripts {
     'client/client.lua',
     'client/functions.lua',
     'client/tot.lua',
-
+    'client/commands.lua',
+    
 
     -- RageUI
     'RageUI/src/RMenu.lua',
