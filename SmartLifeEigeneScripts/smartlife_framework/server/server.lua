@@ -15,7 +15,7 @@ AddEventHandler('playerConnecting', function(name, setKickReason, deferrals)
     else
         deferrals.done()
 
-        if Config.benutzeESX == false then 
+        if Config.benutzeESX == false or Config.benutzeESX == nil then 
             MySQL.Sync.fetchScalar('SELECT 1 FROM users WHERE identifier = @identifier', {
                 ['@identifier'] = identifier
             }, function(result)
@@ -25,7 +25,7 @@ AddEventHandler('playerConnecting', function(name, setKickReason, deferrals)
                     })
                 end
             end)
-        elseif Config.benutzeESX == true then
+        elseif Config.benutzeESX == false or Config.benutzeESX == nil then
             print("ESX Wird benutzt, user tabelle wird übersprungen")
         else
             print("In der Config ist benutzeESX entweder leer oder falsch, bitte überprüfe es nochmal. Dein wert: " .. Config.benutzeESX)

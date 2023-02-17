@@ -1,3 +1,4 @@
+-- Credits gehen raus an den Developer von RageUI und an paar YT Tutorials
 fx_version 'cerulean'
 games {'gta5'}
 author 'Gabriel - SmartLife'
@@ -7,13 +8,15 @@ version '1.0.1'
 server_scripts {
     'server/server.lua',
     'server/position.lua',
+    'server/tot.lua',
     '@mysql-async/lib/MySQL.lua'
 }
 
 client_scripts {
     'client/client.lua',
+    'client/functions.lua',
+    'client/tot.lua',
 
-    
 
     -- RageUI
     'RageUI/src/RMenu.lua',
